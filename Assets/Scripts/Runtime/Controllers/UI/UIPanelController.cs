@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Enums;
 using Signals;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Controllers.UI
@@ -21,7 +21,7 @@ namespace Controllers.UI
             CoreUISignals.Instance.onOpenPanel += OnOpenPanel;
             CoreUISignals.Instance.onCloseAllPanel += OnCloseAllPanel;
         }
-
+        [Button("Close All Panels")]
         private void OnCloseAllPanel()
         {
             foreach (var layer in layers)
@@ -35,13 +35,15 @@ namespace Controllers.UI
 #endif
             }
         }
-
+        
+        [Button("Open Panel")]
         private void OnOpenPanel(UIPanelTypes panelType, int value)
         {
             OnClosePanel(value);
             Instantiate(Resources.Load<GameObject>($"Screens/{panelType}Panel"),layers[value]);
         }
-
+       
+        [Button("Close Panel")]
         private void OnClosePanel(int value)
         {
             if (layers[value].childCount <= 0) return;

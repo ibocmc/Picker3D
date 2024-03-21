@@ -1,10 +1,9 @@
-﻿using System;
-using Commands.Level;
+﻿using Commands.Level;
 using Data.UnityObjects;
 using Data.ValueObjects;
+using Enums;
 using Signals;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 namespace Managers
 {
@@ -12,6 +11,7 @@ namespace Managers
     {
         [SerializeField] private Transform levelHolder;
         [SerializeField] private byte totalLevelCount;
+        
         private byte _currentLevel;
         private LevelData _levelData;
 
@@ -92,12 +92,8 @@ namespace Managers
         private void Start()
         {
             CoreGameSignals.Instance.onLevelInitialize?.Invoke((byte)(_currentLevel % totalLevelCount));
-            //UI Signals
+            CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Start,1);
         }
-
-       
-        
-       
 
     }
 }
