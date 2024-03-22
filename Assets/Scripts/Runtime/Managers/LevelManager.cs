@@ -1,11 +1,11 @@
-﻿using Commands.Level;
-using Data.UnityObjects;
-using Data.ValueObjects;
-using Enums;
-using Signals;
+﻿using Data.ValueObjects;
+using Runtime.Commands.Level;
+using Runtime.Data.UnityObjects;
+using Runtime.Enums;
+using Runtime.Signals;
 using UnityEngine;
 
-namespace Managers
+namespace Runtime.Managers
 {
     public class LevelManager : MonoBehaviour
     {

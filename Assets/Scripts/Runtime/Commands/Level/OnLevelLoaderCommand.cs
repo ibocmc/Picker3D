@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace  Commands.Level
+namespace Runtime.Commands.Level
 {
     public class OnLevelLoaderCommand
     {
@@ -13,7 +13,8 @@ namespace  Commands.Level
 
         internal void Execute(byte levelIndex)
         {
-            Object.Instantiate(Resources.Load<GameObject>($"Prefabs/LevelPrefabs/level {levelIndex}"), _levelHolder, true);
+            Object.Instantiate(Resources.Load<GameObject>($"Prefabs/LevelPrefabs/level {levelIndex}"),
+                _levelHolder, true);
         }
     }
 }

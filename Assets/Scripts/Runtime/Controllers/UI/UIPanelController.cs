@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Enums;
-using Signals;
+using Runtime.Enums;
+using Runtime.Signals;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Controllers.UI
+namespace Runtime.Controllers.UI
 {
     public class UIPanelController : MonoBehaviour
     {
@@ -17,9 +17,9 @@ namespace Controllers.UI
 
         private void SubscribeEvents()
         {
-            CoreUISignals.Instance.onClosepanel += OnClosePanel;
+            CoreUISignals.Instance.onClosePanel += OnClosePanel;
             CoreUISignals.Instance.onOpenPanel += OnOpenPanel;
-            CoreUISignals.Instance.onCloseAllPanel += OnCloseAllPanel;
+            CoreUISignals.Instance.onCloseAllPanels += OnCloseAllPanel;
         }
         [Button("Close All Panels")]
         private void OnCloseAllPanel()
@@ -57,9 +57,9 @@ namespace Controllers.UI
         
         private void UnSubscribeEvents()
         {
-            CoreUISignals.Instance.onClosepanel -= OnClosePanel;
+            CoreUISignals.Instance.onClosePanel -= OnClosePanel;
             CoreUISignals.Instance.onOpenPanel -= OnOpenPanel;
-            CoreUISignals.Instance.onCloseAllPanel -= OnCloseAllPanel;
+            CoreUISignals.Instance.onCloseAllPanels -= OnCloseAllPanel;
         }
 
         private void OnDisable()
