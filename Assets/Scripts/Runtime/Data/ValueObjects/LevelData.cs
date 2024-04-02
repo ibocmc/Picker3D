@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
+
 
 namespace Data.ValueObjects
 {
@@ -7,5 +9,6 @@ namespace Data.ValueObjects
     public struct LevelData
     {
         public List<PoolData> Pools;
+        public Color _color;
     }
 }

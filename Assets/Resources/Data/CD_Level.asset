@@ -17,3 +17,19 @@ MonoBehaviour:
     - RequiredObjectCount: 10
     - RequiredObjectCount: 20
     - RequiredObjectCount: 30
+    _color: {r: 0.10980393, g: 0.48627454, b: 0.14901961, a: 0}
+  - Pools:
+    - RequiredObjectCount: 12
+    - RequiredObjectCount: 22
+    - RequiredObjectCount: 28
+    _color: {r: 0.10980393, g: 0.48627454, b: 0.14901961, a: 0}
+  - Pools:
+    - RequiredObjectCount: 15
+    - RequiredObjectCount: 25
+    - RequiredObjectCount: 30
+    _color: {r: 0.10980393, g: 0.48627454, b: 0.14901961, a: 0}
+  - Pools:
+    - RequiredObjectCount: 18
+    - RequiredObjectCount: 28
+    - RequiredObjectCount: 42
+    _color: {r: 0.10980393, g: 0.48627454, b: 0.14901961, a: 0}
